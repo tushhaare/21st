@@ -466,34 +466,45 @@ if(autoScrollBtn){
 
         if(autoScroll){
 
-            autoScrollBtn.textContent =
-            "❤️ Auto Scroll: ON";
+            autoScrollBtn.innerHTML =
+            "⏸️ Stop Auto Scroll";
+
+            autoScrollBtn.classList.add("active");
 
             scrollInterval = setInterval(()=>{
 
-                window.scrollBy(0,1);
+                window.scrollBy({
+                    top:2,
+                    left:0,
+                    behavior:"instant"
+                });
 
                 if(
                     window.innerHeight +
                     window.scrollY >=
-                    document.body.offsetHeight - 10
+                    document.documentElement.scrollHeight - 10
                 ){
+
                     clearInterval(scrollInterval);
 
                     autoScroll = false;
 
-                    autoScrollBtn.textContent =
-                    "❤️ Auto Scroll: OFF";
+                    autoScrollBtn.innerHTML =
+                    "❤️ Auto Scroll";
+
+                    autoScrollBtn.classList.remove("active");
                 }
 
-            },100);
+            },120);
 
         }else{
 
-            autoScrollBtn.textContent =
-            "❤️ Auto Scroll: OFF";
-
             clearInterval(scrollInterval);
+
+            autoScrollBtn.innerHTML =
+            "❤️ Auto Scroll";
+
+            autoScrollBtn.classList.remove("active");
         }
 
     });
