@@ -873,3 +873,7 @@ section{
 
     transform:scale(1.05);
 }
+
+.music-modal ~ #autoScrollBtn{
+    display:none;
+}
