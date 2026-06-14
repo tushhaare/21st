@@ -655,97 +655,131 @@ section{
 
 }
 
+/* =========================
+   MUSIC MODAL
+========================= */
+
 .music-modal{
     position:fixed;
     inset:0;
-
-    background:rgba(255,247,250,.96);
-
-    z-index:10000;
 
     display:flex;
     justify-content:center;
     align-items:center;
 
     padding:20px;
+
+    background:rgba(255,247,250,.96);
+
+    z-index:10000;
 }
 
 .music-popup{
 
-    width:min(92vw,420px);
+    width:100%;
+    max-width:420px;
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:24px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.12);
 
     max-height:85vh;
 
     overflow-y:auto;
-
-    background:white;
-
-    border-radius:30px;
-
-    padding:25px;
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,.08);
 }
 
 .music-popup h2{
+
     text-align:center;
+
     color:#cf5d89;
-    margin-bottom:10px;
+
+    margin-bottom:8px;
 }
 
 .music-popup p{
+
     text-align:center;
-    color:#7a636b;
-    margin-bottom:25px;
+
+    margin-bottom:20px;
+
+    color:#777;
 }
 
+/* =========================
+   SONG CARDS
+========================= */
+
 .song-card{
+
     display:flex;
+
     align-items:center;
-    gap:15px;
+
+    gap:12px;
 
     padding:10px;
 
-    border-radius:15px;
+    border-radius:16px;
 
     cursor:pointer;
 
-    margin-bottom:10px;
-
     transition:.3s;
+
+    margin-bottom:10px;
 }
 
 .song-card:hover{
-    background:#fff5f9;
+
+    background:#fff2f7;
 }
 
 .song-card.active{
-    background:#ffe7f0;
+
+    background:#ffe3ef;
 }
 
 .song-card img{
-    width:55px;
-    height:55px;
+
+    width:60px;
+
+    height:60px;
+
     object-fit:cover;
+
     border-radius:12px;
+
+    flex-shrink:0;
 }
 
 .song-title{
+
     font-weight:600;
+
+    color:#444;
 }
 
 .song-artist{
+
     font-size:.85rem;
-    color:#7a636b;
+
+    color:#888;
 }
 
+/* =========================
+   START BUTTON
+========================= */
+
 #startJourney{
+
     width:100%;
 
     margin-top:15px;
-
-    padding:14px;
 
     border:none;
 
@@ -753,43 +787,191 @@ section{
 
     color:white;
 
-    border-radius:15px;
+    padding:14px;
+
+    border-radius:16px;
 
     cursor:pointer;
+
+    font-weight:600;
 }
 
 #startJourney:disabled{
+
     opacity:.5;
+
     cursor:not-allowed;
 }
+
+/* =========================
+   MINI PLAYER
+========================= */
 
 .mini-player{
 
     position:fixed;
 
-    left:12px;
-    right:12px;
-    bottom:12px;
-
-    max-width:800px;
-
-    margin:auto;
+    left:10px;
+    right:10px;
+    bottom:10px;
 
     background:white;
 
-    border-radius:18px;
+    border-radius:20px;
+
+    padding:10px;
 
     display:flex;
+
     align-items:center;
 
-    gap:12px;
-
-    padding:10px 14px;
+    gap:10px;
 
     box-shadow:
-        0 10px 30px rgba(0,0,0,.12);
+        0 10px 30px rgba(0,0,0,.15);
 
     z-index:9998;
+}
+
+.mini-player img{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:12px;
+
+    object-fit:cover;
+}
+
+.player-info{
+
+    flex:1;
+
+    min-width:0;
+}
+
+#playerTitle{
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+}
+
+#playerArtist{
+
+    font-size:.75rem;
+
+    color:#777;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+}
+
+.player-controls{
+
+    display:flex;
+
+    gap:6px;
+}
+
+.player-controls button{
+
+    border:none;
+
+    background:#ffe6f0;
+
+    border-radius:10px;
+
+    padding:8px;
+
+    cursor:pointer;
+}
+
+/* =========================
+   SEEKBAR
+========================= */
+
+.player-progress{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin-top:4px;
+}
+
+#seekBar{
+
+    flex:1;
+}
+
+#currentTime,
+#duration{
+
+    font-size:.7rem;
+
+    color:#666;
+}
+
+/* =========================
+   AUTO SCROLL BUTTON
+========================= */
+
+#autoScrollBtn{
+
+    position:fixed;
+
+    right:15px;
+
+    bottom:95px;
+
+    border:none;
+
+    background:#cf5d89;
+
+    color:white;
+
+    padding:12px 18px;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.15);
+}
+
+#autoScrollBtn.active{
+
+    background:#6fcf97;
+}
+
+.hide-auto-scroll{
+
+    display:none !important;
+}
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden{
+
+    display:none !important;
 }
 
 .reasons-container{
@@ -836,44 +1018,4 @@ section{
     color:#cf5d89;
 
     font-family:'Cormorant Garamond', serif;
-}
-
-#autoScrollBtn{
-
-    position:fixed;
-
-    right:15px;
-    bottom:90px;
-
-    z-index:500;
-
-    border:none;
-
-    background:#cf5d89;
-
-    color:white;
-
-    padding:12px 18px;
-
-    border-radius:999px;
-
-    cursor:pointer;
-
-    font-size:.85rem;
-
-    box-shadow:
-        0 8px 20px rgba(0,0,0,.15);
-
-    transition:.3s;
-}
-
-#autoScrollBtn.active{
-
-    background:#6fcf97;
-
-    transform:scale(1.05);
-}
-
-.hide-auto-scroll{
-    display:none !important;
 }
