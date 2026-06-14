@@ -116,10 +116,13 @@ async function loadTimeline() {
 
                     mediaHTML += `
                         <video
-                            controls
-                            preload="metadata"
-                            class="timeline-video"
-                        >
+    controls
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    class="timeline-video"
+>
                             <source
                                 src="${video}"
                                 type="video/mp4"
@@ -447,3 +450,42 @@ if(envelope){
     });
 
 }
+
+const videoObserver =
+new IntersectionObserver(
+
+(entries)=>{
+
+    entries.forEach(entry=>{
+
+        const video = entry.target;
+
+        if(entry.isIntersecting){
+
+            video.play().catch(()=>{});
+
+        }else{
+
+            video.pause();
+
+        }
+
+    });
+
+},
+{
+    threshold:0.6
+}
+);
+
+setTimeout(()=>{
+
+    document
+        .querySelectorAll(".timeline-video")
+        .forEach(video=>{
+
+            videoObserver.observe(video);
+
+        });
+
+},1000);
