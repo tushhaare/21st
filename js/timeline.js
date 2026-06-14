@@ -116,10 +116,13 @@ async function loadTimeline() {
 
                     mediaHTML += `
                         <video
-                            controls
-                            preload="metadata"
-                            class="timeline-video"
-                        >
+class="timeline-video"
+muted
+loop
+playsinline
+controls
+preload="metadata"
+>
                             <source
                                 src="${video}"
                                 type="video/mp4"
@@ -447,3 +450,77 @@ if(envelope){
     });
 
 }
+
+let autoScroll = false;
+let scrollInterval;
+
+const autoScrollBtn =
+document.getElementById("autoScrollBtn");
+
+autoScrollBtn.addEventListener("click",()=>{
+
+    autoScroll = !autoScroll;
+
+    if(autoScroll){
+
+        autoScrollBtn.textContent =
+        "❤️ Auto Scroll: ON";
+
+        scrollInterval = setInterval(()=>{
+
+            window.scrollBy({
+                top:1,
+                behavior:"smooth"
+            });
+
+        },60);
+
+    }else{
+
+        autoScrollBtn.textContent =
+        "❤️ Auto Scroll: OFF";
+
+        clearInterval(scrollInterval);
+
+    }
+
+});
+
+const videoObserver =
+new IntersectionObserver(
+
+(entries)=>{
+
+    entries.forEach(entry=>{
+
+        const video = entry.target;
+
+        if(entry.isIntersecting){
+
+            video.play().catch(()=>{});
+
+        }else{
+
+            video.pause();
+
+        }
+
+    });
+
+},
+{
+    threshold:0.6
+}
+);
+
+setTimeout(()=>{
+
+    document
+    .querySelectorAll(".timeline-video")
+    .forEach(video=>{
+
+        videoObserver.observe(video);
+
+    });
+
+},1000);
