@@ -119,6 +119,7 @@ async function loadTimeline() {
 class="timeline-video"
 muted
 loop
+autoplay
 playsinline
 controls
 preload="metadata"
@@ -457,34 +458,47 @@ let scrollInterval;
 const autoScrollBtn =
 document.getElementById("autoScrollBtn");
 
-autoScrollBtn.addEventListener("click",()=>{
+if(autoScrollBtn){
 
-    autoScroll = !autoScroll;
+    autoScrollBtn.addEventListener("click",()=>{
 
-    if(autoScroll){
+        autoScroll = !autoScroll;
 
-        autoScrollBtn.textContent =
-        "❤️ Auto Scroll: ON";
+        if(autoScroll){
 
-        scrollInterval = setInterval(()=>{
+            autoScrollBtn.textContent =
+            "❤️ Auto Scroll: ON";
 
-            window.scrollBy({
-                top:1,
-                behavior:"smooth"
-            });
+            scrollInterval = setInterval(()=>{
 
-        },60);
+                window.scrollBy(0,1);
 
-    }else{
+                if(
+                    window.innerHeight +
+                    window.scrollY >=
+                    document.body.offsetHeight - 10
+                ){
+                    clearInterval(scrollInterval);
 
-        autoScrollBtn.textContent =
-        "❤️ Auto Scroll: OFF";
+                    autoScroll = false;
 
-        clearInterval(scrollInterval);
+                    autoScrollBtn.textContent =
+                    "❤️ Auto Scroll: OFF";
+                }
 
-    }
+            },100);
 
-});
+        }else{
+
+            autoScrollBtn.textContent =
+            "❤️ Auto Scroll: OFF";
+
+            clearInterval(scrollInterval);
+        }
+
+    });
+
+}
 
 const videoObserver =
 new IntersectionObserver(
