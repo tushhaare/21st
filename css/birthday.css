@@ -894,3 +894,12 @@ margin:auto;
 
     font-family:'Cormorant Garamond', serif;
 }
+
+#autoScrollBtn{
+    border:none;
+    background:#fff6fa;
+    padding:8px 12px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:.8rem;
+}
