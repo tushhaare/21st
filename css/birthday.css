@@ -672,26 +672,33 @@ section{
 }
 
 .music-popup{
-    width:100%;
-    max-width:500px;
+
+    width:min(92vw,400px);
+
+    max-height:80vh;
+
+    overflow-y:auto;
 
     background:white;
 
-    border-radius:30px;
+    border-radius:28px;
 
-    padding:30px;
+    padding:22px;
 
     box-shadow:
         0 15px 40px rgba(0,0,0,.08);
 }
 
 .music-popup h2{
+    font-size:1.5rem;
     text-align:center;
     color:#cf5d89;
     margin-bottom:10px;
 }
 
 .music-popup p{
+    font-size:.9rem;
+line-height:1.5;
     text-align:center;
     color:#7a636b;
     margin-bottom:25px;
@@ -701,7 +708,7 @@ section{
     display:flex;
     align-items:center;
 
-    gap:15px;
+    gap:10px;
 
     padding:10px;
 
@@ -723,8 +730,8 @@ section{
 }
 
 .song-card img{
-    width:55px;
-    height:55px;
+    width:50px;
+    height:50px;
     object-fit:cover;
     border-radius:12px;
 }
