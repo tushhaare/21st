@@ -116,14 +116,10 @@ async function loadTimeline() {
 
                     mediaHTML += `
                         <video
-class="timeline-video"
-muted
-loop
-autoplay
-playsinline
-controls
-preload="metadata"
->
+                            controls
+                            preload="metadata"
+                            class="timeline-video"
+                        >
                             <source
                                 src="${video}"
                                 type="video/mp4"
@@ -190,59 +186,43 @@ const lightboxImage =
 const closeLightbox =
     document.getElementById("closeLightbox");
 
-document.addEventListener("click",(e)=>{
+document.addEventListener("click", (e) => {
 
-    if(
-        e.target &&
+    if (
         e.target.classList.contains("timeline-image")
-    ){
+    ) {
 
-        if(lightbox && lightboxImage){
+        lightboxImage.src = e.target.src;
 
-            lightboxImage.src =
-                e.target.src;
+        lightbox.classList.add("active");
 
-            lightbox.classList.add("active");
-
-            document.body.style.overflow =
-                "hidden";
-        }
+        document.body.style.overflow = "hidden";
 
     }
 
 });
 
-if(closeLightbox){
+closeLightbox.addEventListener("click", () => {
 
-    closeLightbox.addEventListener("click",()=>{
+    lightbox.classList.remove("active");
 
-        if(lightbox){
+    document.body.style.overflow = "auto";
 
-            lightbox.classList.remove("active");
+});
 
-            document.body.style.overflow =
-                "auto";
-        }
+lightbox.addEventListener("click", (e) => {
 
-    });
+    if (e.target === lightbox) {
 
-}
+        lightbox.classList.remove("active");
 
-if(lightbox){
+        document.body.style.overflow = "auto";
 
-    lightbox.addEventListener("click",(e)=>{
+    }
 
-        if(e.target === lightbox){
+});
 
-            lightbox.classList.remove("active");
 
-            document.body.style.overflow =
-                "auto";
-        }
-
-    });
-
-}
 
 // ======================================
 // ESC KEY SUPPORT
@@ -309,7 +289,7 @@ setInterval(createHeart,1500);
 function updateRelationshipTime() {
 
     const startDate =
-new Date("2023-11-03T00:00:00+05:30");
+        new Date("2023-11-03T00:00:00");
 
     const now =
         new Date();
@@ -467,99 +447,3 @@ if(envelope){
     });
 
 }
-
-let autoScroll = false;
-let scrollInterval;
-
-const autoScrollBtn =
-document.getElementById("autoScrollBtn");
-
-if(autoScrollBtn){
-
-    autoScrollBtn.addEventListener("click",()=>{
-
-        autoScroll = !autoScroll;
-
-        if(autoScroll){
-
-            autoScrollBtn.innerHTML =
-            "⏸️ Stop Auto Scroll";
-
-            autoScrollBtn.classList.add("active");
-
-            scrollInterval = setInterval(()=>{
-
-                window.scrollBy(0,2);
-
-                if(
-                    window.innerHeight +
-                    window.scrollY >=
-                    document.documentElement.scrollHeight - 10
-                ){
-
-                    clearInterval(scrollInterval);
-
-                    autoScroll = false;
-
-                    autoScrollBtn.innerHTML =
-                    "❤️ Auto Scroll";
-
-                    autoScrollBtn.classList.remove("active");
-                }
-
-            },120);
-
-        }else{
-
-            clearInterval(scrollInterval);
-
-            autoScrollBtn.innerHTML =
-            "❤️ Auto Scroll";
-
-            autoScrollBtn.classList.remove("active");
-        }
-
-    });
-
-}
-
-const videoObserver =
-new IntersectionObserver(
-
-(entries)=>{
-
-    entries.forEach(entry=>{
-
-        const video = entry.target;
-
-        if(entry.isIntersecting){
-
-    video.currentTime = 0;
-
-    video.play().catch(()=>{});
-
-}else{
-
-    video.pause();
-
-}
-
-    });
-
-},
-{
-    threshold:0.6
-}
-);
-
-setTimeout(()=>{
-
-    document
-    .querySelectorAll(".timeline-video")
-    .forEach(video=>{
-
-        videoObserver.observe(video);
-
-    });
-
-},1000);
