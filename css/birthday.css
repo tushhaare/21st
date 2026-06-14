@@ -843,9 +843,9 @@ section{
     position:fixed;
 
     right:15px;
-    bottom:95px;
+    bottom:90px;
 
-    z-index:9999;
+    z-index:500;
 
     border:none;
 
@@ -862,7 +862,7 @@ section{
     font-size:.85rem;
 
     box-shadow:
-        0 10px 25px rgba(0,0,0,.15);
+        0 8px 20px rgba(0,0,0,.15);
 
     transition:.3s;
 }
@@ -874,6 +874,6 @@ section{
     transform:scale(1.05);
 }
 
-.music-modal ~ #autoScrollBtn{
-    display:none;
+.hide-auto-scroll{
+    display:none !important;
 }
