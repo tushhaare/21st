@@ -43,10 +43,6 @@ const prevSong =
 const nextSong =
     document.getElementById("nextSong");
 
-document
-    .getElementById("autoScrollBtn")
-    .classList.add("hide-auto-scroll");
-
 async function loadMusic(){
 
     const response =
@@ -134,10 +130,6 @@ startJourney.addEventListener("click",()=>{
 
     musicModal.style.display =
         "none";
-
-    document
-        .getElementById("autoScrollBtn")
-        .classList.remove("hide-auto-scroll");
 
     miniPlayer.classList.remove("hidden");
 
