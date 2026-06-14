@@ -1,0 +1,38 @@
+[
+  {
+    "title":"Te Amo (Duet)",
+    "artist":"Pritam, Ash King, Sunidhi Chauhan",
+    "audio":"assets/music/teamo.mp3",
+    "cover":"assets/covers/teamo.jpg"
+  },
+  {
+    "title":"Rang",
+    "artist":"Garvit - Priyansh",
+    "audio":"assets/music/rang.mp3",
+    "cover":"assets/covers/rang.jpg"
+  },
+  {
+    "title":"Tune Kaha",
+    "artist":"Prateek Kuhad",
+    "audio":"assets/music/tunekaha.mp3",
+    "cover":"assets/covers/tunekaha.jpg"
+  },
+  {
+    "title":"Ganga Kinare",
+    "artist":"Irshad Kamil, Jubin Nautiyal, Tanishk Bagchi",
+    "audio":"assets/music/gangakinare.mp3",
+    "cover":"assets/covers/gangakinare.jpg"
+  },
+  {
+    "title":"Only Mine",
+    "artist":"Darshan Raval",
+    "audio":"assets/music/onlymine.mp3",
+    "cover":"assets/covers/onlymine.jpg"
+  },
+  {
+    "title":"Tu Hai Meri",
+    "artist":"Sachet - Parampara",
+    "audio":"assets/music/tuhaimeri.mp3",
+    "cover":"assets/covers/tuhaimeri.jpg"
+  }
+]

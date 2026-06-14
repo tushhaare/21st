@@ -1,0 +1,318 @@
+[
+
+    {
+    "date": "2023-08-09",
+    "photos": [
+      "assets/photos/2023/2023-08-09-1.png"
+    ],
+    "videos": []
+  },
+  {
+    "date": "2023-09-09",
+    "photos": [
+      "assets/photos/2023/2023-09-09-1.jpg"
+    ],
+    "videos": []
+  },
+  {
+    "date": "2023-12-10",
+    "photos": [
+      "assets/photos/2023/2023-12-10-1.jpg",
+      "assets/photos/2023/2023-12-10-2.jpg",
+      "assets/photos/2023/2023-12-10-3.jpg"
+    ],
+    "videos": []
+  },
+  {
+    "date": "2024-02-08",
+    "photos": [],
+    "videos": [
+      "assets/videos/2024/2024-02-08-1.mp4"
+    ]
+  },
+  {
+    "date": "2024-02-09",
+    "photos": [
+      "assets/photos/2024/2024-02-09-1.png",
+      "assets/photos/2024/2024-02-09-2.jpg"
+    ],
+    "videos": []
+  },
+  {
+    "date": "2024-02-14",
+    "photos": [],
+    "videos": [
+      "assets/videos/2024/2024-02-14-1.mp4"
+    ]
+  },
+  {
+    "date": "2024-02-16",
+    "photos": [
+      "assets/photos/2024/2024-02-16-1.jpg"
+    ],
+    "videos": [
+      "assets/videos/2024/2024-02-16-1.mp4"
+    ]
+  },
+  {
+    "date": "2024-02-17",
+    "photos": [],
+    "videos": [
+      "assets/videos/2024/2024-02-17-1.mp4"
+    ]
+  },
+  {
+    "date": "2024-02-23",
+    "photos": [],
+    "videos": [
+      "assets/videos/2024/2024-02-23-1.mp4"
+    ]
+  },
+  {
+    "date": "2024-03-02",
+    "photos": [],
+    "videos": [
+      "assets/videos/2024/2024-03-02-1.mp4"
+    ]
+  },
+ 
+  {
+    "date": "2024-03-13",
+    "photos": [],
+    "videos": [
+      "assets/videos/2024/2024-03-13-1.mp4"
+    ]
+  },
+   {
+    "date": "2024-03-24",
+    "photos": [
+      "assets/photos/2024/2024-03-24-1.png",
+      "assets/photos/2024/2024-03-24-2.png"
+    ],
+    "videos": []
+  },
+  {
+    "date": "2024-04-26",
+    "photos": [
+      "assets/photos/2024/2024-04-26-1.png",
+      "assets/photos/2024/2024-04-26-2.jpg"
+    ],
+    "videos": []
+  },
+  {
+    "date": "2024-05-16",
+    "photos": [
+      "assets/photos/2024/2024-05-16-1.jpg",
+      "assets/photos/2024/2024-05-16-2.jpg"
+    ],
+    "videos": []
+  },
+  
+  {
+    "date": "2024-09-11",
+    "photos": [
+      "assets/photos/2024/2024-09-11-1.jpg"
+    ],
+    "videos": []
+  },
+  {
+    "date": "2024-09-27",
+    "photos": [],
+    "videos": [
+      "assets/videos/2024/2024-09-27-1.mp4"
+    ]
+  },
+  {
+    "date": "2024-10-11",
+    "photos": [],
+    "videos": [
+      "assets/videos/2024/2024-10-11-1.mp4"
+    ]
+  },
+  {
+    "date": "2024-11-23",
+    "photos": [],
+    "videos": [
+      "assets/videos/2024/2024-11-23-1.mp4"
+    ]
+  },
+
+  {
+    "date": "2025-02-13",
+    "photos": [
+        "assets/photos/2025/2025-02-13-1.jpg"
+    ],
+    "videos": []
+  },
+    {
+        "date": "2025-02-14",
+        "photos": [
+            "assets/photos/2025/2025-02-14-1.jpg"
+        ],
+        "videos": []
+    },
+{
+    "date": "2025-02-15",
+    "photos": [
+        "assets/photos/2025/2025-02-15-1.png"
+    ],
+    "videos": []
+},
+{
+    "date": "2025-02-19",
+    "photos": [
+        "assets/photos/2025/2025-02-19-1.jpg"
+    ],
+    "videos": []
+},
+{
+    "date": "2025-04-17",
+    "photos": [
+        "assets/photos/2025/2025-04-07-1.jpg"
+    ],
+    "videos": []
+},
+{
+    "date": "2025-04-26",
+    "photos": [
+        "assets/photos/2025/2025-04-26-1.png"
+    ],
+    "videos": []
+},
+  {
+    "date": "2025-08-01",
+    "photos": [],
+    "videos": [
+        "assets/videos/2025/2025-08-01-1.mp4"
+    ]
+},
+{
+    "date": "2025-08-22",
+    "photos": [
+        "assets/photos/2025/2025-08-22-1.jpg"
+    ],
+    "videos": []
+},
+{
+    "date": "2025-10-11",
+    "photos": [
+        "assets/photos/2025/2025-10-11-1.jpg"
+    ],
+    "videos": []
+},
+{
+    "date": "2025-10-14",
+    "photos": [
+        "assets/photos/2025/2025-10-14-1.jpg"
+    ],
+    "videos": []
+},
+{
+    "date": "2025-12-10",
+    "photos": [
+        "assets/photos/2025/2025-12-10-1.jpg"
+    ],
+    "videos": [
+        "assets/videos/2025/2025-12-10-1.mp4"
+    ]
+},
+  {
+    "date": "2026-01-06",
+    "photos": [
+      "assets/photos/2026/2026-01-08-1.jpg"
+    ],
+    "videos": [
+
+    ]
+  },
+  {
+    "date": "2026-01-09",
+    "photos": [],
+    "videos": [
+      "assets/videos/2026/2026-01-09-1.mp4"
+    ]
+  },
+  {
+    "date": "2026-01-10",
+    "photos": [
+      "assets/photos/2026/2026-01-10-1.jpg",
+      "assets/photos/2026/2026-01-10-2.jpg",
+      "assets/photos/2026/2026-01-10-3.jpg",
+      "assets/photos/2026/2026-01-10-4.jpg"
+    ],
+    "videos": []
+  },
+  {
+    "date": "2026-01-11",
+    "photos": [
+      "assets/photos/2026/2026-01-11-1.jpg"
+    ],
+    "videos": []
+  },
+  {
+    "date": "2026-02-06",
+    "photos": [
+      "assets/photos/2026/2026-02-06-1.jpg"
+    ],
+    "videos": []
+  },
+  {
+    "date": "2026-02-07",
+    "photos": [
+      "assets/photos/2026/2026-02-07-1.jpg",
+      "assets/photos/2026/2026-02-07-2.jpg"
+    ],
+    "videos": []
+  },
+  {
+    "date": "2026-03-20",
+    "photos": [],
+    "videos": [
+      "assets/videos/2026/2026-03-20-1.mp4"
+    ]
+  },
+  {
+    "date": "2026-04-13",
+    "photos": [
+      "assets/photos/2026/2026-04-13-1.jpg"
+    ],
+    "videos": []
+  },
+  {
+    "date": "2026-04-16",
+    "photos": [
+      "assets/photos/2026/2026-04-16-1.jpg"
+    ],
+    "videos": []
+  },
+  {
+    "date": "2026-04-23",
+    "photos": [
+      "assets/photos/2026/2026-04-23-1.jpg",
+      "assets/photos/2026/2026-04-23-2.jpg"
+    ],
+    "videos": []
+  },
+  {
+    "date": "2026-04-24",
+    "photos": [
+      "assets/photos/2026/2026-04-24-1.jpg",
+      "assets/photos/2026/2026-04-24-2.png"
+    ],
+    "videos": []
+  },
+  {
+    "date": "2026-04-28",
+    "photos": [
+      "assets/photos/2026/2026-04-28-1.jpg"
+    ],
+    "videos": []
+  },
+  {
+    "date": "2026-06-04",
+    "photos": [
+      "assets/photos/2026/2026-06-04-1.jpg"
+    ],
+    "videos": []
+  }
+]

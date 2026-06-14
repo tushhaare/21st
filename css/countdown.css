@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:#fff6f8;
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+    position:relative;
+}
+
+.container{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    text-align:center;
+}
+
+.special-text{
+    color:#c98aa5;
+    font-size:0.9rem;
+    margin-bottom:8px;
+}
+
+.title{
+    font-family:'Dancing Script',cursive;
+    font-size:3rem;
+    color:#d46a92;
+    margin-bottom:20px;
+}
+
+.teddy{
+    font-size:5rem;
+    animation:float 3s ease-in-out infinite;
+}
+
+.subtitle{
+    margin-top:10px;
+    color:#6e5b63;
+}
+
+.countdown-card{
+    margin-top:30px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.time-box{
+    width:80px;
+    height:90px;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.time-box span{
+    font-size:1.7rem;
+    font-weight:700;
+    color:#d46a92;
+}
+
+.time-box small{
+    color:#7d6b73;
+}
+
+.gift-btn{
+    margin-top:35px;
+    border:none;
+    background:#f4b6c2;
+    color:white;
+    padding:15px 28px;
+    border-radius:50px;
+    font-size:1rem;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.gift-btn:hover{
+    transform:scale(1.05);
+}
+
+.message-box{
+    margin-top:25px;
+    min-height:40px;
+    color:#7d6b73;
+    font-size:.95rem;
+}
+
+.footer{
+    position:absolute;
+    bottom:20px;
+    color:#b58a9a;
+    font-size:.8rem;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+}
