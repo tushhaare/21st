@@ -187,20 +187,80 @@ const lightbox =
 const lightboxImage =
     document.getElementById("lightboxImage");
 
+const lightbox =
+    document.getElementById("lightbox");
+
+const lightboxImage =
+    document.getElementById("lightboxImage");
+
 const closeLightbox =
     document.getElementById("closeLightbox");
 
-document.addEventListener("click", (e) => {
+document.addEventListener("click",(e)=>{
 
-    if (
+    if(
+        e.target &&
         e.target.classList.contains("timeline-image")
-    ) {
+    ){
 
-        lightboxImage.src = e.target.src;
+        if(lightbox && lightboxImage){
 
-        lightbox.classList.add("active");
+            lightboxImage.src =
+                e.target.src;
 
-        document.body.style.overflow = "hidden";
+            lightbox.classList.add("active");
+
+            document.body.style.overflow =
+                "hidden";
+        }
+
+    }
+
+});
+
+if(closeLightbox){
+
+    closeLightbox.addEventListener("click",()=>{
+
+        if(lightbox){
+
+            lightbox.classList.remove("active");
+
+            document.body.style.overflow =
+                "auto";
+        }
+
+    });
+
+}
+
+if(lightbox){
+
+    lightbox.addEventListener("click",(e)=>{
+
+        if(e.target === lightbox){
+
+            lightbox.classList.remove("active");
+
+            document.body.style.overflow =
+                "auto";
+        }
+
+    });
+
+}
+
+document.addEventListener("keydown",(e)=>{
+
+    if(
+        e.key === "Escape" &&
+        lightbox
+    ){
+
+        lightbox.classList.remove("active");
+
+        document.body.style.overflow =
+            "auto";
 
     }
 
@@ -293,7 +353,7 @@ setInterval(createHeart,1500);
 function updateRelationshipTime() {
 
     const startDate =
-        new Date("2023-11-03T00:00:00");
+new Date("2023-11-03T00:00:00+05:30");
 
     const now =
         new Date();
@@ -473,11 +533,7 @@ if(autoScrollBtn){
 
             scrollInterval = setInterval(()=>{
 
-                window.scrollBy({
-                    top:2,
-                    left:0,
-                    behavior:"instant"
-                });
+                window.scrollBy(0,2);
 
                 if(
                     window.innerHeight +
@@ -522,13 +578,15 @@ new IntersectionObserver(
 
         if(entry.isIntersecting){
 
-            video.play().catch(()=>{});
+    video.currentTime = 0;
 
-        }else{
+    video.play().catch(()=>{});
 
-            video.pause();
+}else{
 
-        }
+    video.pause();
+
+}
 
     });
 
