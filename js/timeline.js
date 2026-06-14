@@ -187,12 +187,6 @@ const lightbox =
 const lightboxImage =
     document.getElementById("lightboxImage");
 
-const lightbox =
-    document.getElementById("lightbox");
-
-const lightboxImage =
-    document.getElementById("lightboxImage");
-
 const closeLightbox =
     document.getElementById("closeLightbox");
 
@@ -249,44 +243,6 @@ if(lightbox){
     });
 
 }
-
-document.addEventListener("keydown",(e)=>{
-
-    if(
-        e.key === "Escape" &&
-        lightbox
-    ){
-
-        lightbox.classList.remove("active");
-
-        document.body.style.overflow =
-            "auto";
-
-    }
-
-});
-
-closeLightbox.addEventListener("click", () => {
-
-    lightbox.classList.remove("active");
-
-    document.body.style.overflow = "auto";
-
-});
-
-lightbox.addEventListener("click", (e) => {
-
-    if (e.target === lightbox) {
-
-        lightbox.classList.remove("active");
-
-        document.body.style.overflow = "auto";
-
-    }
-
-});
-
-
 
 // ======================================
 // ESC KEY SUPPORT
