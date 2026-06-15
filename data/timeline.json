@@ -219,15 +219,16 @@
   {
     "date": "2026-01-06",
     "photos": [
-      "assets/photos/2026/2026-01-08-1.jpg"
     ],
     "videos": [
-
+"assets/videos/2026/2026-01-06-1.mp4"
     ]
   },
   {
     "date": "2026-01-09",
-    "photos": [],
+    "photos": ["assets/photos/2026/2026-01-10-2.jpg",
+        "assets/photos/2026/2026-01-10-1.jpg"
+    ],
     "videos": [
       "assets/videos/2026/2026-01-09-1.mp4"
     ]
@@ -235,8 +236,7 @@
   {
     "date": "2026-01-10",
     "photos": [
-      "assets/photos/2026/2026-01-10-1.jpg",
-      "assets/photos/2026/2026-01-10-2.jpg",
+    
       "assets/photos/2026/2026-01-10-3.jpg",
       "assets/photos/2026/2026-01-10-4.jpg"
     ],
